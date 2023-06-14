@@ -21,6 +21,15 @@ namespace Re2_Fwp
     public partial class SStage3 : Page
     {
         private int clickCnt = 1;
+        public void ClickCnt(int clickCnt)
+        {
+            if (clickCnt == 8)
+            {
+                MessageBox.Show("전부 찾으셨어요! 고생하셨습니다:)");
+                var window=Window.GetWindow(this);
+                window.Close();
+            }
+        }
         public SStage3()
         {
             InitializeComponent();
@@ -38,73 +47,49 @@ namespace Re2_Fwp
         {
             circle1.Visibility = Visibility.Visible;
             score.Text = "Score: " + clickCnt++;
-            if (clickCnt == 8)
-            {
-                MessageBox.Show("전부 찾으셨어요! 고생하셨습니다:)");
-            }
+            ClickCnt(clickCnt);
         }
 
         private void Hide2_MouseDown(object sender, MouseButtonEventArgs e)
         {
             circle2.Visibility = Visibility.Visible;
             score.Text = "Score: " + clickCnt++;
-            if (clickCnt == 8)
-            {
-                MessageBox.Show("전부 찾으셨어요! 고생하셨습니다:)");
-
-            }
+            ClickCnt(clickCnt);
         }
 
         private void Hide3_MouseDown(object sender, MouseButtonEventArgs e)
         {
             circle3.Visibility = Visibility.Visible;
             score.Text = "Score: " + clickCnt++;
-            if (clickCnt == 8)
-            {
-                MessageBox.Show("전부 찾으셨어요! 고생하셨습니다:)");
-            }
+            ClickCnt(clickCnt);
         }
 
         private void Hide4_MouseDown(object sender, MouseButtonEventArgs e)
         {
             circle4.Visibility = Visibility.Visible;
             score.Text = "Score: " + clickCnt++;
-            if (clickCnt == 8)
-            {
-                MessageBox.Show("전부 찾으셨어요! 고생하셨습니다:)");
-            }
+            ClickCnt(clickCnt);
         }
 
         private void Hide5_MouseDown(object sender, MouseButtonEventArgs e)
         {
             circle5.Visibility = Visibility.Visible;
             score.Text = "Score: " + clickCnt++;
-            if (clickCnt == 8)
-            {
-                MessageBox.Show("전부 찾으셨어요! 고생하셨습니다:)");
-            }
+            ClickCnt(clickCnt);
         }
 
         private void Hide6_MouseDown(object sender, MouseButtonEventArgs e)
         {
             circle6.Visibility = Visibility.Visible;
             score.Text = "Score: " + clickCnt++;
-            if (clickCnt == 8)
-            {
-                MessageBox.Show("전부 찾으셨어요! 고생하셨습니다:)");
-
-            }
+            ClickCnt(clickCnt);
         }
 
         private void Hide7_MouseDown(object sender, MouseButtonEventArgs e)
         {
             circle7.Visibility = Visibility.Visible;
             score.Text = "Score: " + clickCnt++;
-            if (clickCnt == 8)
-            {
-                MessageBox.Show("전부 찾으셨어요! 고생하셨습니다:)");
-
-            }
+            ClickCnt(clickCnt);
         }
     }
 }

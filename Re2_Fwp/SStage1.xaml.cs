@@ -20,7 +20,16 @@ namespace Re2_Fwp
     /// </summary>
     public partial class SStage1 : Page
     {
+        
         private int clickCnt = 1;
+        public void ClickCnt(int clickCnt)
+        {
+            if (clickCnt == 8)
+            {
+                MessageBox.Show("전부 찾으셨어요! 다음 Stage로 넘어갑니다!");
+                NavigationService.Navigate(new Uri("/SStage2.xaml", UriKind.Relative));
+            }
+        }
         public SStage1()
         {
             InitializeComponent();
@@ -30,88 +39,56 @@ namespace Re2_Fwp
             circle4.Visibility = Visibility.Hidden;
             circle5.Visibility = Visibility.Hidden;
             circle6.Visibility = Visibility.Hidden;
-            circle7.Visibility = Visibility.Hidden;
-
-            
+            circle7.Visibility = Visibility.Hidden;            
         }
 
         private void Hide1_MouseDown(object sender, MouseButtonEventArgs e)
         {
             circle1.Visibility = Visibility.Visible;
             score.Text = "Score: " + clickCnt++;
-            if (clickCnt == 8)
-            {
-                MessageBox.Show("전부 찾으셨어요! 다음 Stage로 넘어갑니다!");
-                NavigationService.Navigate(new Uri("/SStage2.xaml", UriKind.Relative));
-            }
+            ClickCnt(clickCnt);
         }
 
         private void Hide2_MouseDown(object sender, MouseButtonEventArgs e)
         {
             circle2.Visibility = Visibility.Visible;
             score.Text = "Score: " + clickCnt++;
-            if (clickCnt == 8)
-            {
-                MessageBox.Show("전부 찾으셨어요! 다음 Stage로 넘어갑니다!");
-                NavigationService.Navigate(new Uri("/SStage2.xaml", UriKind.Relative));
-            }
+            ClickCnt(clickCnt);
         }
 
         private void Hide3_MouseDown(object sender, MouseButtonEventArgs e)
         {
             circle3.Visibility = Visibility.Visible;
             score.Text = "Score: " + clickCnt++;
-            if (clickCnt == 8)
-            {
-                MessageBox.Show("전부 찾으셨어요! 다음 Stage로 넘어갑니다!");
-                NavigationService.Navigate(new Uri("/SStage2.xaml", UriKind.Relative));
-            }
+            ClickCnt(clickCnt);
         }
 
         private void Hide4_MouseDown(object sender, MouseButtonEventArgs e)
         {
             circle4.Visibility = Visibility.Visible;
             score.Text = "Score: " + clickCnt++;
-            if (clickCnt == 8)
-            {
-                MessageBox.Show("전부 찾으셨어요! 다음 Stage로 넘어갑니다!");
-                NavigationService.Navigate(new Uri("/SStage2.xaml", UriKind.Relative));
-            }
+            ClickCnt(clickCnt);
         }
 
         private void Hide5_MouseDown(object sender, MouseButtonEventArgs e)
         {
             circle5.Visibility = Visibility.Visible;
             score.Text = "Score: " + clickCnt++;
-            if (clickCnt == 8)
-            {
-                MessageBox.Show("전부 찾으셨어요! 다음 Stage로 넘어갑니다!");
-                NavigationService.Navigate(new Uri("/SStage2.xaml", UriKind.Relative));
-            }
+            ClickCnt(clickCnt);
         }
 
         private void Hide6_MouseDown(object sender, MouseButtonEventArgs e)
         {
             circle6.Visibility = Visibility.Visible;
             score.Text = "Score: " + clickCnt++;
-            if (clickCnt == 8)
-            {
-                MessageBox.Show("전부 찾으셨어요! 다음 Stage로 넘어갑니다!");
-                NavigationService.Navigate(new Uri("/SStage2.xaml", UriKind.Relative));
-            }
+            ClickCnt(clickCnt);
         }
 
         private void Hide7_MouseDown(object sender, MouseButtonEventArgs e)
         {
             circle7.Visibility = Visibility.Visible;
             score.Text = "Score: " + clickCnt++;
-            if (clickCnt == 8)
-            {
-                MessageBox.Show("전부 찾으셨어요! 다음 Stage로 넘어갑니다!");
-                NavigationService.Navigate(new Uri("/SStage2.xaml", UriKind.Relative));
-            }
-        }
-
-        
+            ClickCnt(clickCnt);
+        }        
     }
 }
